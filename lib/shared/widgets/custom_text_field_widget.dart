@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class TextFieldHomeWidget extends StatelessWidget {
+class CustomTextFieldWidget extends StatelessWidget {
   final String labelText;
   final TextEditingController controller;
-  const TextFieldHomeWidget({
+  const CustomTextFieldWidget({
     Key? key,
     required this.labelText,
     required this.controller,

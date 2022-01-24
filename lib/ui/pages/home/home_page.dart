@@ -14,6 +14,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
+  late final TextEditingController weigthController;
+  late final TextEditingController heightController;
+  @override
+  void initState() {
+    weigthController = TextEditingController();
+    heightController = TextEditingController();
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +38,13 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           IconButton(
-              onPressed: homeController.reset,
+              onPressed: () {
+                setState(() {
+                  homeController.reset();
+                  heightController.clear();
+                  weigthController.clear();
+                });
+              },
               icon: const Icon(
                 Icons.autorenew,
               ))
@@ -50,8 +65,8 @@ class _HomePageState extends State<HomePage> {
                   height: size.width * 0.28,
                 ),
               ),
-              TextFieldHomeWidget(
-                controller: homeController.weigthController,
+              CustomTextFieldWidget(
+                controller: weigthController,
                 size: size,
                 labelText: "Peso(kg)",
               ),
@@ -59,16 +74,20 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.symmetric(
                   vertical: size.height * .047,
                 ),
-                child: TextFieldHomeWidget(
-                  controller: homeController.heightController,
+                child: CustomTextFieldWidget(
+                  controller: heightController,
                   size: size,
                   labelText: "Altura(cm)",
                 ),
               ),
               CustomButton(
-                text: "Calcular",
-                onPressed: homeController.calcular,
-              ),
+                  text: "Calcular",
+                  onPressed: () {
+                    homeController.calcular(
+                      height: heightController.text,
+                      weight: weigthController.text,
+                    );
+                  }),
               Padding(
                 padding: EdgeInsets.only(top: size.height * .040),
                 child: ValueListenableBuilder(
@@ -92,5 +111,6 @@ class _HomePageState extends State<HomePage> {
   @override
   dispose() {
     homeController.dispose();
+    super.dispose();
   }
 }
