@@ -1,13 +1,16 @@
 // ignore_for_file: invalid_use_of_visible_for_testing_member
 
 import 'package:flutter/material.dart';
+import 'package:imc/ui/pages/calculadora_imc/calculator_imc_presenter.dart';
 
-class HomeController {
+class ValueNotifierCalculatorImcPresentear implements CalculatorImcPresentear {
+  @override
   final labelStatusValue = ValueNotifier<String>("Digite os valores");
 
   String get labelStatus => labelStatusValue.value;
   set labelStatus(String value) => labelStatusValue.value = value;
-  void calcular({required String weight, required String height}) {
+  @override
+  void calcular(String weight, String height) {
     double _weight = double.parse(weight);
     double _height = double.parse(height) / 100;
     double imc = _weight / (_height * _height);
@@ -33,10 +36,12 @@ class HomeController {
     }
   }
 
+  @override
   void reset() {
     labelStatus = "Digite os valores";
   }
 
+  @override
   void dispose() {
     labelStatusValue.dispose();
   }

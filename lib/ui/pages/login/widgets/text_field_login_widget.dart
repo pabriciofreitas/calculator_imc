@@ -10,10 +10,11 @@ class TextFieldLoginWidget extends StatelessWidget {
     required this.size,
   }) : super(key: key);
   const TextFieldLoginWidget.senha({
+    Key? key,
     required this.text,
     required this.size,
     this.isObscureText = true,
-  });
+  }) : super(key: key);
   final Size size;
 
   @override
