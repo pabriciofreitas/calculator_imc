@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class CustomTextFieldWidget extends StatelessWidget {
   final String labelText;
   final TextEditingController controller;
+  final bool isNumb;
   const CustomTextFieldWidget({
     Key? key,
     required this.labelText,
     required this.controller,
     required this.size,
+    this.isNumb = false,
   }) : super(key: key);
 
   final Size size;
@@ -19,9 +21,8 @@ class CustomTextFieldWidget extends StatelessWidget {
       width: size.width * 0.80,
       child: TextField(
         controller: controller,
-        keyboardType: TextInputType.number,
+        keyboardType: isNumb ? TextInputType.number : null,
         decoration: InputDecoration(
-          // hintText: "Peso(kg)",
           labelText: labelText,
         ),
       ),

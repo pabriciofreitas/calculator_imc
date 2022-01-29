@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imc/presentation/presentations/home/value_notifier_home_presenter.dart';
 import 'package:imc/ui/components/components.dart';
 import 'package:imc/ui/pages/calculadora_imc/calculadora_imc.dart';
 import 'package:imc/ui/pages/home/home.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
         "/login": (context) => const LoginPage(),
-        "/home": (context) => const HomePage(),
+        "/home": (context) =>
+            HomePage(homePresenter: ValueNotifierHomePresenter()),
         "/calculator_imc": (context) => CalculatorImcPage(
               presenter: ValueNotifierCalculatorImcPresentear(),
             ),

@@ -47,6 +47,7 @@ class _CalculatorImcPageState extends State<CalculatorImcPage> {
                 ),
               ),
               CustomTextFieldWidget(
+                isNumb: true,
                 controller: weigthController,
                 size: size,
                 labelText: "Peso(kg)",
@@ -56,6 +57,7 @@ class _CalculatorImcPageState extends State<CalculatorImcPage> {
                   vertical: size.height * .047,
                 ),
                 child: CustomTextFieldWidget(
+                  isNumb: true,
                   controller: heightController,
                   size: size,
                   labelText: "Altura(cm)",
@@ -71,11 +73,11 @@ class _CalculatorImcPageState extends State<CalculatorImcPage> {
                   }),
               Padding(
                 padding: EdgeInsets.only(top: size.height * .040),
-                child: ValueListenableBuilder(
-                    valueListenable: widget.presenter.labelStatusValue,
+                child: ValueListenableBuilder<String>(
+                    valueListenable: widget.presenter.labelStatusNotifier,
                     builder: (_, value, __) {
                       return Text(
-                        "$value",
+                        value,
                         style: Theme.of(context).textTheme.bodyText2!.copyWith(
                               color: Theme.of(context).colorScheme.secondary,
                             ),

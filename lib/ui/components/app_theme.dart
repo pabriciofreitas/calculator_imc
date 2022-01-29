@@ -24,23 +24,25 @@ Theme.of(context).textTheme.headline4?.copyWith(
 
   static ThemeData themeData(ColorScheme colorScheme, Color focusColor) {
     return ThemeData(
-      canvasColor: colorScheme.background,
-      backgroundColor: colorScheme.background,
-      colorScheme: colorScheme,
-      disabledColor: colorScheme.onBackground.withAlpha(40),
-      dividerColor: colorScheme.onBackground.withAlpha(40),
-      elevatedButtonTheme: elevatedButtonThemeData(colorScheme),
-      errorColor: colorScheme.error,
-      focusColor: focusColor,
-      fontFamily: 'Poppins',
-      highlightColor: Colors.transparent,
-      iconTheme: IconThemeData(color: colorScheme.onPrimary),
-      inputDecorationTheme: inputDecorationTheme(colorScheme),
-      primaryColor: colorScheme.primary,
-      primaryColorLight: colorScheme.primaryContainer,
-      scaffoldBackgroundColor: colorScheme.background,
-      textTheme: _textTheme,
-    );
+        unselectedWidgetColor: colorScheme.primary,
+        canvasColor: colorScheme.background,
+        backgroundColor: colorScheme.background,
+        colorScheme: colorScheme,
+        disabledColor: colorScheme.onBackground.withAlpha(40),
+        dividerColor: colorScheme.onBackground.withAlpha(40),
+        elevatedButtonTheme: elevatedButtonThemeData(colorScheme),
+        errorColor: colorScheme.error,
+        focusColor: focusColor,
+        fontFamily: 'Poppins',
+        highlightColor: Colors.transparent,
+        iconTheme: IconThemeData(color: colorScheme.primary),
+        inputDecorationTheme: inputDecorationTheme(colorScheme),
+        primaryColor: colorScheme.primary,
+        primaryColorLight: colorScheme.primaryContainer,
+        scaffoldBackgroundColor: colorScheme.background,
+        textTheme: _textTheme,
+        toggleableActiveColor: colorScheme.primary,
+        listTileTheme: ListTileThemeData(iconColor: colorScheme.primary));
   }
 
   static const ColorScheme lightColorScheme = ColorScheme(
@@ -70,7 +72,8 @@ Theme.of(context).textTheme.headline4?.copyWith(
 
   //static const _light = FontWeight.w300;
   static const _regular = FontWeight.w400;
-  //static const _medium = FontWeight.w500;
+  static const _medium = FontWeight.w500;
+  static const _bold = FontWeight.w700;
 
   static final TextTheme _textTheme = TextTheme(
     // headline1: GoogleFonts.poppins(
@@ -89,12 +92,12 @@ Theme.of(context).textTheme.headline4?.copyWith(
       fontWeight: _regular,
     ), // +++++++++++ subCabeça headline5
 
-    // headline6: GoogleFonts.poppins(
-    //     fontSize: 19, fontWeight: FontWeight.w500, letterSpacing: 0.15),
+    headline6: GoogleFonts.poppins(
+        fontSize: 18, fontWeight: _medium, letterSpacing: 0.15),
     // subtitle1: GoogleFonts.poppins(
     //     fontSize: 15, fontWeight: FontWeight.w400, letterSpacing: 0.15),
-    // subtitle2: GoogleFonts.poppins(
-    //     fontSize: 13, fontWeight: FontWeight.w500, letterSpacing: 0.1),
+    subtitle2: GoogleFonts.poppins(
+        fontSize: 13, fontWeight: _bold, letterSpacing: 0.1),
 
     bodyText1: GoogleFonts.poppins(
       fontSize: 16,
@@ -165,7 +168,7 @@ Theme.of(context).textTheme.headline4?.copyWith(
       //   ),
       // ),
       labelStyle: _textTheme.bodyText1,
-      // filled: true,
+      filled: true,
       fillColor: colorScheme.onBackground,
       hintStyle: _textTheme.bodyText1?.copyWith(),
     );
@@ -206,68 +209,3 @@ Theme.of(context).textTheme.headline4?.copyWith(
 
 */
 
-// TextTheme(
-//   headline1: GoogleFonts.poppins(
-//     fontSize: 93,
-//     fontWeight: FontWeight.w300,
-//     letterSpacing: -1.5
-//   ),
-//   headline2: GoogleFonts.poppins(
-//     fontSize: 58,
-//     fontWeight: FontWeight.w300,
-//     letterSpacing: -0.5
-//   ),
-//   headline3: GoogleFonts.poppins(
-//     fontSize: 46,
-//     fontWeight: FontWeight.w400
-//   ),
-//   headline4: GoogleFonts.poppins(
-//     fontSize: 33,
-//     fontWeight: FontWeight.w400,
-//     letterSpacing: 0.25
-//   ),
-//   headline5: GoogleFonts.poppins(
-//     fontSize: 23,
-//     fontWeight: FontWeight.w400
-//   ),
-//   headline6: GoogleFonts.poppins(
-//     fontSize: 19,
-//     fontWeight: FontWeight.w500,
-//     letterSpacing: 0.15
-//   ),
-//   subtitle1: GoogleFonts.poppins(
-//     fontSize: 15,
-//     fontWeight: FontWeight.w400,
-//     letterSpacing: 0.15
-//   ),
-//   subtitle2: GoogleFonts.poppins(
-//     fontSize: 13,
-//     fontWeight: FontWeight.w500,
-//     letterSpacing: 0.1
-//   ),
-//   bodyText1: GoogleFonts.poppins(
-//     fontSize: 15,
-//     fontWeight: FontWeight.w400,
-//     letterSpacing: 0.5
-//   ),
-//   bodyText2: GoogleFonts.poppins(
-//     fontSize: 13,
-//     fontWeight: FontWeight.w400,
-//     letterSpacing: 0.25
-//   ),
-//   button: GoogleFonts.poppins(
-//     fontSize: 13,
-//     fontWeight: FontWeight.w500,
-//     letterSpacing: 1.25
-//   ),
-//   caption: GoogleFonts.poppins(
-//     fontSize: 12,
-//     fontWeight: FontWeight.w400,
-//     letterSpacing: 0.4
-//   ),
-//   overline: GoogleFonts.poppins(
-//     fontSize: 10,
-//     fontWeight: FontWeight.w400,
-//     letterSpacing: 1.5
-//   ),
-// )

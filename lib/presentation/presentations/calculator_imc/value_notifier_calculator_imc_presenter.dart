@@ -4,17 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:imc/ui/pages/calculadora_imc/calculator_imc_presenter.dart';
 
 class ValueNotifierCalculatorImcPresentear implements CalculatorImcPresentear {
+  final labelStatusControler = ValueNotifier<String>("Digite os valores");
   @override
-  final labelStatusValue = ValueNotifier<String>("Digite os valores");
+  ValueNotifier<String> get labelStatusNotifier => labelStatusControler;
 
-  String get labelStatus => labelStatusValue.value;
-  set labelStatus(String value) => labelStatusValue.value = value;
   @override
-  void calcular(String weight, String height) {
+  void calcular(String height, String weight) {
     double _weight = double.parse(weight);
     double _height = double.parse(height) / 100;
     double imc = _weight / (_height * _height);
-    labelStatus = "${_getInterpretation(imc)} (${imc.toStringAsFixed(2)})";
+    labelStatusNotifier.value =
+        "${_getInterpretation(imc)} (${imc.toStringAsFixed(2)})";
   }
 
   //
@@ -36,13 +36,7 @@ class ValueNotifierCalculatorImcPresentear implements CalculatorImcPresentear {
     }
   }
 
-  @override
   void reset() {
-    labelStatus = "Digite os valores";
-  }
-
-  @override
-  void dispose() {
-    labelStatusValue.dispose();
+    labelStatusNotifier.value = "Digite os valores";
   }
 }
