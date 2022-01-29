@@ -1,9 +1,9 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:imc/ui/pages/to_do_list/to_do_list_presenter.dart';
 
 import '../../../shared/shared.dart';
+import 'to_do_list_presenter.dart';
 
 class ToDoListPage extends StatefulWidget {
   final ToDoListPresenter presenter;
@@ -24,7 +24,6 @@ class _ToDoListPageState extends State<ToDoListPage> {
   //
   @override
   Widget build(BuildContext context) {
-    bool isCheck = false;
     Size size = MediaQuery.of(context).size;
     return Padding(
       padding: EdgeInsets.all(size.width * .05),

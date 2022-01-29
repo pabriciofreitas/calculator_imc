@@ -1,6 +1,6 @@
 //aqui você vai por nome da pakage que vai usar por exemplo shared_preeferid_adapter
-import 'package:imc/data/local/to_do_list_repository.dart';
-import 'package:imc/domain/entities/task_entity.dart';
+import '../../data/local/to_do_list_repository.dart';
+import '../../domain/entities/task_entity.dart';
 
 class RespositoryLocalAdapter implements ToDoListRepository {
   static final RespositoryLocalAdapter _instance =

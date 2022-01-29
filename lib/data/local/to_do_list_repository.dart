@@ -1,4 +1,4 @@
-import 'package:imc/domain/entities/entities.dart';
+import '../../domain/entities/entities.dart';
 
 abstract class ToDoListRepository {
   void addTask(TaskEntity task);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:imc/ui/components/app_images.dart';
 
 import '../../../shared/shared.dart';
+import '../../components/app_images.dart';
 import 'widgets/widgets.dart';
 
 class LoginPage extends StatelessWidget {

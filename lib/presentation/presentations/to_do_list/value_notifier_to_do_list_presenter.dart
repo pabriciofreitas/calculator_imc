@@ -1,7 +1,6 @@
-import 'package:imc/domain/entities/entities.dart';
-import 'package:imc/ui/pages/to_do_list/to_do_list_presenter.dart';
-
 import '../../../data/local/local.dart';
+import '../../../domain/entities/entities.dart';
+import '../../../ui/pages/to_do_list/to_do_list_presenter.dart';
 
 class ValueNotifierToDoListPresenter implements ToDoListPresenter {
   final ToDoListRepository repository;

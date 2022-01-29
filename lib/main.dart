@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:imc/presentation/presentations/home/value_notifier_home_presenter.dart';
-import 'package:imc/ui/components/components.dart';
-import 'package:imc/ui/pages/calculadora_imc/calculadora_imc.dart';
-import 'package:imc/ui/pages/home/home.dart';
-import 'package:imc/ui/pages/login/login_page.dart';
 
+import 'presentation/presentations/home/value_notifier_home_presenter.dart';
 import 'presentation/presentations/presentations.dart';
+import 'ui/components/components.dart';
+import 'ui/pages/calculadora_imc/calculadora_imc.dart';
+import 'ui/pages/home/home.dart';
+import 'ui/pages/login/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "Ioasys Challenges",
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightThemeData,
       initialRoute: "/login",

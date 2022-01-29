@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:imc/infra/local/repository_local_adapter.dart';
-import 'package:imc/presentation/presentations/to_do_list/value_notifier_to_do_list_presenter.dart';
-import 'package:imc/shared/shared.dart';
-import 'package:imc/ui/pages/calculadora_imc/calculadora_imc.dart';
-import 'package:imc/ui/pages/home/home_presenter.dart';
-import 'package:imc/ui/pages/to_do_list/to_do_list_page.dart';
 
+import '../../../infra/local/repository_local_adapter.dart';
 import '../../../presentation/presentations/presentations.dart';
+import '../../../presentation/presentations/to_do_list/value_notifier_to_do_list_presenter.dart';
+import '../../../shared/shared.dart';
 import '../../components/components.dart';
+import '../calculadora_imc/calculadora_imc.dart';
+import '../to_do_list/to_do_list_page.dart';
 import '../to_do_list/to_do_list_presenter.dart';
+import 'home_presenter.dart';
 
 class HomePage extends StatefulWidget {
   final HomePresenter homePresenter;
