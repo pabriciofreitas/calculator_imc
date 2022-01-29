@@ -1,4 +1,4 @@
-package com.example.imc
+package com.example.ioasys_challenges
 
 import io.flutter.embedding.android.FlutterActivity
 

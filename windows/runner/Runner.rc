@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "imc" "\0"
+            VALUE "FileDescription", "ioasys_challenges" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "imc" "\0"
+            VALUE "InternalName", "ioasys_challenges" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "imc.exe" "\0"
-            VALUE "ProductName", "imc" "\0"
+            VALUE "OriginalFilename", "ioasys_challenges.exe" "\0"
+            VALUE "ProductName", "ioasys_challenges" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

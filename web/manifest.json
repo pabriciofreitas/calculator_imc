@@ -1,6 +1,6 @@
 {
-    "name": "imc",
-    "short_name": "imc",
+    "name": "ioasys_challenges",
+    "short_name": "ioasys_challenges",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

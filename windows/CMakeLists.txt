@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(imc LANGUAGES CXX)
+project(ioasys_challenges LANGUAGES CXX)
 
-set(BINARY_NAME "imc")
+set(BINARY_NAME "ioasys_challenges")
 
 cmake_policy(SET CMP0063 NEW)
 

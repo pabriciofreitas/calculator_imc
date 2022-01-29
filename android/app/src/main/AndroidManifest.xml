@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.imc">
+    package="com.example.ioasys_challenges">
    <application
-        android:label="imc"
+        android:label="ioasys_challenges"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
