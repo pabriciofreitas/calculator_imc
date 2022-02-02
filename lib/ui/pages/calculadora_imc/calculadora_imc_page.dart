@@ -66,10 +66,13 @@ class _CalculatorImcPageState extends State<CalculatorImcPage> {
               CustomButton(
                   text: "Calcular",
                   onPressed: () {
-                    widget.presenter.calcular(
-                      heightController.text,
-                      weigthController.text,
-                    );
+                    if (heightController.text.isNotEmpty &&
+                        weigthController.text.isNotEmpty) {
+                      widget.presenter.calcular(
+                        heightController.text,
+                        weigthController.text,
+                      );
+                    }
                   }),
               Padding(
                 padding: EdgeInsets.only(top: size.height * .040),

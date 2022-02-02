@@ -1,3 +1,3 @@
 class Constants {
-  // static String get logo => "assets/images/logo.png";
+  static String get API => "https://api.hgbrasil.com/finance?format-json";
 }

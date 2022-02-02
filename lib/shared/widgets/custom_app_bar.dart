@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../ui/components/components.dart';
+import '../../ui/components/app_images.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Size size;

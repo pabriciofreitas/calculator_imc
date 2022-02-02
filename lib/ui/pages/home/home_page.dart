@@ -5,8 +5,7 @@ import '../../../presentation/presentations/presentations.dart';
 import '../../../presentation/presentations/to_do_list/value_notifier_to_do_list_presenter.dart';
 import '../../../shared/shared.dart';
 import '../../components/components.dart';
-import '../calculadora_imc/calculadora_imc.dart';
-import '../to_do_list/to_do_list_page.dart';
+import '../pages.dart';
 import '../to_do_list/to_do_list_presenter.dart';
 import 'home_presenter.dart';
 
@@ -28,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   final List _drawerOptionList = [
     ["Calculadora IMC", Icons.accessibility_new],
     ["Lista de Tarefas", Icons.playlist_add_check],
-    //["Lista de Tarefas", Icons.playlist_add_check]
+    ["Conversor de Moedas", Icons.attach_money]
   ];
   @override
   void initState() {
@@ -48,7 +47,11 @@ class _HomePageState extends State<HomePage> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: CustomAppBar(
-        pageViewNames: const <String>["Calculadora IMC", "Lista de Tarefas"],
+        pageViewNames: const <String>[
+          "Calculadora IMC",
+          "Lista de Tarefas",
+          "Conversor de Moedas"
+        ],
         size: size,
         indexPage: widget.homePresenter.pageIndexNotifier,
       ),
@@ -128,7 +131,7 @@ class _HomePageState extends State<HomePage> {
             presenter: ValueNotifierCalculatorImcPresentear(),
           ),
           ToDoListPage(presenter: widget.presenterToDoList),
-          Container()
+          const CurrencyConverterPage(),
         ],
       ),
     );
