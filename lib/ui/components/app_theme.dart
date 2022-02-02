@@ -94,8 +94,11 @@ Theme.of(context).textTheme.headline4?.copyWith(
 
     headline6: GoogleFonts.poppins(
         fontSize: 18, fontWeight: _medium, letterSpacing: 0.15),
-    // subtitle1: GoogleFonts.poppins(
-    //     fontSize: 15, fontWeight: FontWeight.w400, letterSpacing: 0.15),
+    subtitle1: GoogleFonts.poppins(
+      fontSize: 16,
+      fontWeight: _bold,
+      letterSpacing: 0.15,
+    ),
     subtitle2: GoogleFonts.poppins(
         fontSize: 13, fontWeight: _bold, letterSpacing: 0.1),
 
